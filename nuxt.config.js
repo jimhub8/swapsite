@@ -77,7 +77,7 @@ export default {
   //  admin.jim/api/auth/login
   // http://admin.jim/api/auth/login
   axios: {
-    baseURL: 'https://swapstore.co.ke'
+    baseURL: 'http://nuxt.swapstore.co.ke'
   },
 
   // auth: {
