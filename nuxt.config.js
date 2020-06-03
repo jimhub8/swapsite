@@ -81,8 +81,8 @@ export default {
   // http://admin.jim/api/auth/login
   axios: {
     // baseURL: process.env.API_URL
-    baseURL: 'http://dellmat.jim'
-    // baseURL: 'http://nuxt.swapstore.co.ke'
+    // baseURL: 'http://dellmat.jim'
+    baseURL: 'http://nuxt.swapstore.co.ke'
   },
 
   // auth: {
