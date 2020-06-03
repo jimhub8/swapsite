@@ -50,7 +50,9 @@ export default {
   */
   plugins: [
     '~/plugins/element-ui.js',
-    // '~plugins/mixins/user.js'
+    {src: '~/plugins/instantSearch.js', ssr: false},
+
+
   ],
   /*
   ** Nuxt.js dev-modules
@@ -65,6 +67,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
     'nuxt-material-design-icons',
     '@nuxtjs/auth',
 
@@ -77,7 +80,9 @@ export default {
   //  admin.jim/api/auth/login
   // http://admin.jim/api/auth/login
   axios: {
-    baseURL: 'http://nuxt.swapstore.co.ke'
+    // baseURL: process.env.API_URL
+    baseURL: 'http://dellmat.jim'
+    // baseURL: 'http://nuxt.swapstore.co.ke'
   },
 
   // auth: {

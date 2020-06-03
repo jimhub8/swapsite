@@ -43,6 +43,8 @@
  * @license MIT
  */
 
+/*! algoliasearch-lite.umd.js | 4.2.0 | © Algolia, inc. | https://github.com/algolia/algoliasearch-client-javascript */
+
 /**
  * Checks if an event is supported in the current execution environment.
  *

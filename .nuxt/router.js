@@ -3,13 +3,16 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _075e3ab8 = () => interopDefault(import('../pages/account/index.vue' /* webpackChunkName: "pages/account/index" */))
 const _10f7e730 = () => interopDefault(import('../pages/Carousel.vue' /* webpackChunkName: "pages/Carousel" */))
 const _852e03b0 = () => interopDefault(import('../pages/Cart.vue' /* webpackChunkName: "pages/Cart" */))
 const _52e2d6e9 = () => interopDefault(import('../pages/category/index.vue' /* webpackChunkName: "pages/category/index" */))
 const _5259ad31 = () => interopDefault(import('../pages/checkout/index.vue' /* webpackChunkName: "pages/checkout/index" */))
 const _77b7e0b2 = () => interopDefault(import('../pages/example.vue' /* webpackChunkName: "pages/example" */))
+const _93b5773e = () => interopDefault(import('../pages/faq/index.vue' /* webpackChunkName: "pages/faq/index" */))
 const _7cd10a22 = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
 const _36cbf0f4 = () => interopDefault(import('../pages/login/index.vue' /* webpackChunkName: "pages/login/index" */))
+const _32ac1e53 = () => interopDefault(import('../pages/privacy/index.vue' /* webpackChunkName: "pages/privacy/index" */))
 const _546b8364 = () => interopDefault(import('../pages/register/index.vue' /* webpackChunkName: "pages/register/index" */))
 const _4a7b86e1 = () => interopDefault(import('../pages/shop/index.vue' /* webpackChunkName: "pages/shop/index" */))
 const _1b0a3227 = () => interopDefault(import('../pages/subcategories/index.vue' /* webpackChunkName: "pages/subcategories/index" */))
@@ -36,6 +39,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/account",
+    component: _075e3ab8,
+    name: "account"
+  }, {
     path: "/Carousel",
     component: _10f7e730,
     name: "Carousel"
@@ -56,6 +63,10 @@ export const routerOptions = {
     component: _77b7e0b2,
     name: "example"
   }, {
+    path: "/faq",
+    component: _93b5773e,
+    name: "faq"
+  }, {
     path: "/inspire",
     component: _7cd10a22,
     name: "inspire"
@@ -63,6 +74,10 @@ export const routerOptions = {
     path: "/login",
     component: _36cbf0f4,
     name: "login"
+  }, {
+    path: "/privacy",
+    component: _32ac1e53,
+    name: "privacy"
   }, {
     path: "/register",
     component: _546b8364,

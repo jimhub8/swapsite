@@ -7,6 +7,7 @@
 }
 .theme--dark {
   color: #000 !important;
+  background-color: #f9f9f9 !important;
 }
 .theme--dark.v-card {
   background-color: #fff !important;
@@ -146,4 +147,13 @@ body {
 
 .logo {
   width: 150px !important;
+}
+
+
+.theme--dark.v-data-table thead tr th {
+  color: rgba(90, 82, 82, 0.7) !important;
+}
+
+.theme--dark.v-data-table tbody tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+  background: #f0f0f0 !important;
 }

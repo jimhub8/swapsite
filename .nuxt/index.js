@@ -17,6 +17,7 @@ import nuxt_plugin_nuxticons_38eacb84 from 'nuxt_plugin_nuxticons_38eacb84' // S
 import nuxt_plugin_plugin_42857a80 from 'nuxt_plugin_plugin_42857a80' // Source: ./vuetify/plugin.js (mode: 'all')
 import nuxt_plugin_axios_2d2a2f78 from 'nuxt_plugin_axios_2d2a2f78' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_elementui_72a9ed1c from 'nuxt_plugin_elementui_72a9ed1c' // Source: ../plugins/element-ui.js (mode: 'all')
+import nuxt_plugin_instantSearch_5017ec38 from 'nuxt_plugin_instantSearch_5017ec38' // Source: ../plugins/instantSearch.js (mode: 'client')
 import nuxt_plugin_plugin_210bb280 from 'nuxt_plugin_plugin_210bb280' // Source: ./auth/plugin.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -197,6 +198,10 @@ async function createApp (ssrContext) {
 
   if (typeof nuxt_plugin_elementui_72a9ed1c === 'function') {
     await nuxt_plugin_elementui_72a9ed1c(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_instantSearch_5017ec38 === 'function') {
+    await nuxt_plugin_instantSearch_5017ec38(app.context, inject)
   }
 
   if (typeof nuxt_plugin_plugin_210bb280 === 'function') {

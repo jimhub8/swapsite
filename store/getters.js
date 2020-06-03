@@ -113,7 +113,7 @@ export default {
   //   return state.loggedIn
   // },
 
-  // loggedInUser(state) {
-  //   return state.user
-  // }
+  loggedIn(state) {
+    return state.loggedIn
+  }
 }
