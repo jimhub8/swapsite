@@ -150,7 +150,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {"BASE_URL":"http://localhost:3000","API_URL":"http://nuxt.swapstore.co.ke/api/","APP_NAME":"Swap"}
+      env: {"BASE_URL":"http://localhost:3000","API_URL":"http://nuxt.swapstore.co.ke/api/","APP_NAME":"Swap","LOGO":"https://jimkiarie8.nyc3.digitaloceanspaces.com/swap/site/logo.jpg"}
     }
     // Only set once
     if (context.req) {
