@@ -81,9 +81,9 @@ export default {
   // http://admin.jim/api/auth/login
   axios: {
     // baseURL: process.env.API_URL
-    baseURL: 'http://admin.jim'
+    // baseURL: 'http://admin.jim'
     // baseURL: 'http://swap.jim'
-    // baseURL: 'http://seller.swapstore.co.ke'
+    baseURL: 'https://seller.swapstore.co.ke'
   },
 
   // auth: {
