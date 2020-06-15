@@ -6,26 +6,26 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - ' + process.env.APP_NAME,
+    title: 'Swap',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'https://jimkiarie8.nyc3.digitaloceanspaces.com/swap/site/logo.jpg' },
       // { rel: 'stylesheet', href: 'http://dellmat.jim/css/all.css' },
 
       // { rel: 'stylesheet', href: 'http://bootstrap-ecommerce.com/bootstrap-ecommerce-html/css/ui.css' },
       // { rel: 'stylesheet', href: 'http://bootstrap-ecommerce.com/bootstrap-ecommerce-html/css/responsive.css' },
 
-      { rel: 'script', href: 'http://dellmat.jim/js/jquery.js' },
-      { rel: 'script', href: 'http://dellmat.jim/js/bootstrap.min.js' },
-      { rel: 'script', href: 'http://dellmat.jim/vendor/animsition/js/animsition.min.js' },
-      { rel: 'script', href: 'http://dellmat.jim/js/main.min.js' },
-      { rel: 'script', href: 'http://bootstrap-ecommerce.com/bootstrap-ecommerce-html/js/bootstrap.bundle.min.js' },
-      { rel: 'script', href: 'http://bootstrap-ecommerce.com/bootstrap-ecommerce-html/js/script.js' },
+      { rel: 'script', href: 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' },
+      { rel: 'script', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js' },
+      // { rel: 'script', href: 'http://dellmat.jim/vendor/animsition/js/animsition.min.js' },
+      // { rel: 'script', href: 'http://dellmat.jim/js/main.min.js' },
+      // { rel: 'script', href: 'http://bootstrap-ecommerce.com/bootstrap-ecommerce-html/js/bootstrap.bundle.min.js' },
+      // { rel: 'script', href: 'http://bootstrap-ecommerce.com/bootstrap-ecommerce-html/js/script.js' },
 
 
 

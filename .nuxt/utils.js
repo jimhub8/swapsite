@@ -150,7 +150,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {"BASE_URL":"http://localhost:3000","API_URL":"https://seller.swapstore.co.ke/api/","APP_NAME":"Swap","LOGO":"https://jimkiarie8.nyc3.digitaloceanspaces.com/swap/site/logo.jpg"}
+      env: {"BASE_URL":"http://localhost:3000","API_URL":"https://seller.swapstore.co.ke/api/","APP_NAME":"Swap","LOGO":"https://jimkiarie8.nyc3.digitaloceanspaces.com/swap/site/logo.jpg","META_CONTENT":"Swap, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL"}
     }
     // Only set once
     if (context.req) {
