@@ -15,6 +15,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_workbox_87bb4740 from 'nuxt_plugin_workbox_87bb4740' // Source: ./workbox.js (mode: 'client')
 import nuxt_plugin_nuxticons_38eacb84 from 'nuxt_plugin_nuxticons_38eacb84' // Source: ./nuxt-icons.js (mode: 'all')
 import nuxt_plugin_plugin_42857a80 from 'nuxt_plugin_plugin_42857a80' // Source: ./vuetify/plugin.js (mode: 'all')
+import nuxt_plugin_googleanalytics_4d2b5d62 from 'nuxt_plugin_googleanalytics_4d2b5d62' // Source: ./google-analytics.js (mode: 'client')
 import nuxt_plugin_axios_2d2a2f78 from 'nuxt_plugin_axios_2d2a2f78' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_elementui_72a9ed1c from 'nuxt_plugin_elementui_72a9ed1c' // Source: ../plugins/element-ui.js (mode: 'all')
 import nuxt_plugin_instantSearch_5017ec38 from 'nuxt_plugin_instantSearch_5017ec38' // Source: ../plugins/instantSearch.js (mode: 'client')
@@ -65,7 +66,7 @@ async function createApp (ssrContext) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"titleTemplate":"%s - undefined","title":"Swap","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"multi-vendor ecommerce website"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"ecommerce"},{"hid":"author","name":"author","content":"Jimmy"},{"hid":"theme-color","name":"theme-color","content":"#fff"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"ecommerce"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"ecommerce"},{"hid":"og:description","name":"og:description","property":"og:description","content":"multi-vendor ecommerce website"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"https:\u002F\u002Fjimkiarie8.nyc3.digitaloceanspaces.com\u002Fswap\u002Fsite\u002Flogo.jpg"},{"rel":"script","href":"https:\u002F\u002Fajax.googleapis.com\u002Fajax\u002Flibs\u002Fjquery\u002F3.5.1\u002Fjquery.min.js"},{"rel":"script","href":"https:\u002F\u002Fstackpath.bootstrapcdn.com\u002Fbootstrap\u002F4.5.0\u002Fjs\u002Fbootstrap.min.js"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.406b0b35.json"},{"rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64.5f6a36.png"},{"rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512.5f6a36.png","sizes":"512x512"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
+    head: {"titleTemplate":"%s - ","title":"Swap","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"multi-vendor ecommerce website"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"ecommerce"},{"hid":"author","name":"author","content":"Jimmy"},{"hid":"theme-color","name":"theme-color","content":"#fff"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"ecommerce"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"ecommerce"},{"hid":"og:description","name":"og:description","property":"og:description","content":"multi-vendor ecommerce website"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"https:\u002F\u002Fjimkiarie8.nyc3.digitaloceanspaces.com\u002Fswap\u002Fsite\u002Flogo.jpg"},{"rel":"script","href":"https:\u002F\u002Fajax.googleapis.com\u002Fajax\u002Flibs\u002Fjquery\u002F3.5.1\u002Fjquery.min.js"},{"rel":"script","href":"https:\u002F\u002Fstackpath.bootstrapcdn.com\u002Fbootstrap\u002F4.5.0\u002Fjs\u002Fbootstrap.min.js"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.406b0b35.json"},{"rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64.5f6a36.png"},{"rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512.5f6a36.png","sizes":"512x512"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
 
     store,
     router,
@@ -190,6 +191,10 @@ async function createApp (ssrContext) {
 
   if (typeof nuxt_plugin_plugin_42857a80 === 'function') {
     await nuxt_plugin_plugin_42857a80(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_googleanalytics_4d2b5d62 === 'function') {
+    await nuxt_plugin_googleanalytics_4d2b5d62(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_2d2a2f78 === 'function') {
