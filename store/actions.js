@@ -56,6 +56,7 @@ export default {
     // console.log(response.data);
 
     commit(update, response.data)
+    return response
 
     // console.log(payload);
 
