@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import axios from "axios";
 
 export default {
   mode: 'universal',
@@ -166,7 +167,7 @@ export default {
     id: "UA-169626171-1",
     dev: true
   },
-
+/*
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://swapstore.co.ke',
@@ -187,5 +188,19 @@ export default {
       priority: 1,
       lastmodISO: new Date().toISOString().split('T')[0]
     }))
-  },
+  },*/
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: process.env.BASE_URL,
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false,
+    routes: async () => {
+      // let apiUrl = process.env.API_URL || 'http://admin.jim/api/'
+      let apiUrl = process.env.API_URL || 'https://seller.swapstore.co.ke/api/'
+      const { data } = await axios.get(`${apiUrl}products`)
+      return data.data.map(v => `/shop/${v.id}`)
+    },
+  }
 }
